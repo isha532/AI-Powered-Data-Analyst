@@ -1,0 +1,13 @@
+streamlit
+pandas
+numpy
+openpyxl
+plotly
+fastapi
+uvicorn
+sqlalchemy
+python-multipart
+python-dotenv
+pytest
+
+google-genai
