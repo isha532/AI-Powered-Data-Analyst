@@ -120,30 +120,3 @@ def test_original_text_data_unchanged():
     assert df["City"].iloc[0] == " nagpur "
     assert cleaned_df["City"].iloc[0] == "Nagpur"
 
-import pandas as pd
-
-from backend.cleaner import (
-    clean_missing_values,
-    remove_duplicates,
-    convert_numeric_columns,
-    standardize_text_columns
-)
-
-df = pd.read_csv("sample_data/sales_data.csv")
-
-print("Original Data:")
-print(df)
-
-df = clean_missing_values(df)
-df = remove_duplicates(df)
-df = convert_numeric_columns(df, ["Quantity", "Price"])
-df = standardize_text_columns(df, ["Product", "Category", "Region"])
-
-print("\nCleaned Data:")
-print(df)
-
-print("\nMissing Values:")
-print(df.isnull().sum())
-
-print("\nDuplicate Rows:")
-print(df.duplicated().sum())

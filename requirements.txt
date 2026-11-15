@@ -9,5 +9,4 @@ sqlalchemy
 python-multipart
 python-dotenv
 pytest
-
 google-genai
